@@ -7,6 +7,11 @@ const Home: NextPage = () => {
     <div>
       <h1>Next is an SPA</h1>
       <p>Open the network tab and navigate around :)</p>
+      <p>
+        {
+          "Run `pnpm build` => `pnpm start` to get less stuff in the network tab"
+        }
+      </p>
       <div>
         Link to static page <a href="/01-static">anchor</a>{" "}
         <Link href="/01-static">Link</Link>

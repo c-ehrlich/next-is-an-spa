@@ -6,7 +6,7 @@ export default function NormalPage() {
   const [count, setCount] = useState(0);
   return (
     <div>
-      <h1>Normal Page</h1>
+      <h1>Static Page</h1>
       <button onClick={() => setCount(count + 1)}>Count is {count}</button>
       <div>
         Link to home <a href="/">anchor</a> <Link href="/">Link</Link>
