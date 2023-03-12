@@ -9,6 +9,9 @@ export default function NormalPage() {
       <h1>This page is not linked from the index page</h1>
       <button onClick={() => setCount(count + 1)}>Count is {count}</button>
       <div>
+        Link to home <a href="/">anchor</a> <Link href="/">Link</Link>
+      </div>
+      <div>
         Link to static page <a href="/01-static">anchor</a>{" "}
         <Link href="/01-static">Link</Link>
       </div>

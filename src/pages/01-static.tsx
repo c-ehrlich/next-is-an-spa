@@ -9,6 +9,9 @@ export default function NormalPage() {
       <h1>Normal Page</h1>
       <button onClick={() => setCount(count + 1)}>Count is {count}</button>
       <div>
+        Link to home <a href="/">anchor</a> <Link href="/">Link</Link>
+      </div>
+      <div>
         Link to ssr page <a href="/02-ssr">anchor</a>{" "}
         <Link href="/02-ssr">Link</Link>
       </div>

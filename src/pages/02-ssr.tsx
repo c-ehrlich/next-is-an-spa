@@ -3,6 +3,15 @@ import { type InferGetServerSidePropsType } from "next";
 import Link from "next/link";
 import { useState } from "react";
 
+export const getServerSideProps = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  return {
+    props: {
+      random: Math.random(),
+    },
+  };
+};
+
 export default function GsspPage(
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
@@ -12,6 +21,9 @@ export default function GsspPage(
       <h1>Page with getServerSideProps</h1>
       <p>Random number: {props.random}</p>
       <button onClick={() => setCount(count + 1)}>Count is {count}</button>
+      <div>
+        Link to home <a href="/">anchor</a> <Link href="/">Link</Link>
+      </div>
       <div>
         Link to static page <a href="/01-static">anchor</a>{" "}
         <Link href="/01-static">Link</Link>
@@ -27,12 +39,3 @@ export default function GsspPage(
     </div>
   );
 }
-
-export const getServerSideProps = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return {
-    props: {
-      random: Math.random(),
-    },
-  };
-};
