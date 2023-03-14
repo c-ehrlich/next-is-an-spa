@@ -1,4 +1,4 @@
-# Next.js is an MPA
+# Next.js is an SPA
 
 (with the /pages directory)
 
